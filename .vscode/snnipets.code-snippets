@@ -21,19 +21,21 @@
     "body": [
       "'use strict';",
       "",
-      "const lines: string[] = [];",
-      "const reader = require('readline').createInterface({",
-      "  input: process.stdin,",
-      "  output: process.stdout,",
-      "});",
+      "(() => {",
+      "  const lines: string[] = [];",
+      "  const reader = require('readline').createInterface({",
+      "    input: process.stdin,",
+      "    output: process.stdout,",
+      "  });",
       "",
-      "reader.on('line', (line: string) => {",
-      "  lines.push(line);",
-      "});",
+      "  reader.on('line', (line: string) => {",
+      "    lines.push(line);",
+      "  });",
       "",
-      "reader.on('close', () => {",
-      "  ${1}console.log('Hello, world!');",
-      "});"
+      "  reader.on('close', () => {",
+      "    ${1}console.log('Hello, world!');",
+      "  });",
+      "})();"
     ],
     "description": "Template statement"
   }
